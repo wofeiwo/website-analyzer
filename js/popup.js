@@ -82,7 +82,7 @@ function main() {
         var td2 = document.createElement('td');
         if (data['os'].url) {
             // td2.innerHTML = "<a href=\"" + data['os_url'] + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os_icon'] + "\" />&nbsp;&nbsp;" + data['os'] + "</a>";
-            td2.innerHTML = "<a href=\"" + data['os'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].url + "\"></a>";
+            td2.innerHTML = "<a href=\"" + data['os'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\"></a>";
         }else{
             td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\">";
         }

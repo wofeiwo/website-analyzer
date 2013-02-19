@@ -25,6 +25,8 @@ Website analyzer可以显示以下几项功能：
 * Web Apps
 * Backend Frameworks
 * Frontend Libraries
+* IP address information
+* Raw HTTP response header show
 
 It can show more information when clicked.
 
@@ -32,8 +34,8 @@ It can show more information when clicked.
 
 Plan to add (计划添加)
 ----------
-* IP address information
-* Raw header show
+* <del>IP address information</del>
+* <del>Raw header show</del>
 * CDN identification
 * Statistics script of the website
 
