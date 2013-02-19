@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Analyzer 选项</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+        <form class="form-horizontal" style="width: 480px;">
+            <fieldset>
+                <legend id="legend">Website Analyzer 选项设置</legend>
+                <div class="control-group">
+                <label class="control-label" for="icons" id="labelIcon">显示的图标种类：</label>
+                    <div class="controls">
+                        <select id="icons">
+                             <option value="webserver" id="optWebserver">web服务器</option>
+                             <option value="technology" id="optTechnology">网站技术</option>
+                             <option value="os" id="optOS">操作系统</option>
+                             <option value="webapp" id="optWebapp">网站程序</option>
+                        </select>
+                        <p class="help-block" id="helpIcon">在浏览器地址栏中显示当前页面哪一种技术图标</p>
+                    </div>   
+                </div> 
+
+                <div class="control-group">
+                <label class="control-label" for="upload_server" id="labelUploadServer">是否上传云端：</label>
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" id="upload_server" value="yes" id="ckbUpload" disabled>
+                            上传&nbsp;<span class="label label-error" id="labelNotSupported">暂不支持</span>
+                        </label>
+                        <p class="help-block" id="helpUploadServer">将当前页面的技术信息上传到云端，之后您就可以直接在云端查询所有插件用户上传的服务器技术信息。<br />
+                        <span class="label label-warning" id="warn">注意</span>&nbsp;<small class="text-warning" id="warnUploadServer">Website Analyzer绝不会发送与您隐私相关信息，只包含本插件分析出的当前页面技术结果。<small></p>
+                    </div>   
+                </div> 
+                <div class="control-group">
+                    <div class="controls">
+                    <div id="status" class="label label-info"></div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button id="save" class="btn btn-primary">保存</button>
+                    <button id="close" class="btn">关闭</button>
+                </div>
+            </fieldset>
+        </form>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/options.js"></script>
+  </body>
+</html>

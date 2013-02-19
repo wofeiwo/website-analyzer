@@ -1,0 +1,41 @@
+{
+   "extName": {
+      "message" : "Website Analyzer"
+   },
+   "extDescription": {
+      "message" : "Analyze and display the Web technology of current page."
+   },
+   "tabTechnology": {
+      "message" : "Technologies"
+   },
+   "tabDetail": {
+      "message" : "Details"
+   },
+   "tabCategory": {
+      "message" : "Categories"
+   },
+   "btnOptions": {
+      "message" : "Options Page"
+   },
+   "btnShowHeader": {
+      "message" : "Raw HTTP Headers"
+   },
+   "ip": {
+      "message" : "IP Address"
+   },
+   "webserver": {
+      "message" : "WebServer"
+   },
+   "webTechnology": {
+      "message" : "Technology"
+   },
+   "os": {
+      "message" : "Operation System"
+   },
+   "frontLibraries": {
+      "message" : "Front Libraries"
+   },
+   "webApps": {
+      "message" : "Web Applications"
+   }
+}

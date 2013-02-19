@@ -1,0 +1,41 @@
+{
+   "extName": {
+      "message" : "网站技术分析(Website Analyzer)"
+   },
+   "extDescription": {
+      "message" : "分析并展现当前页面所使用的网站技术。"
+   },
+   "tabTechnology": {
+      "message" : "技术"
+   },
+   "tabDetail": {
+      "message" : "详细信息"
+   },
+   "tabCategory": {
+      "message" : "类别"
+   },
+   "btnOptions": {
+      "message" : "选项"
+   },
+   "btnShowHeader": {
+      "message" : "原始HTTP头"
+   },
+   "ip": {
+      "message" : "IP地址"
+   },
+   "webserver": {
+      "message" : "服务器软件"
+   },
+   "webTechnology": {
+      "message" : "网站技术"
+   },
+   "os": {
+      "message" : "操作系统"
+   },
+   "frontLibraries": {
+      "message" : "前端库"
+   },
+   "webApps": {
+      "message" : "Web程序"
+   }
+}

@@ -1,0 +1,41 @@
+{
+   "extName": {
+      "message" : "網站程式分析(Website Analyzer)"
+   },
+   "extDescription": {
+      "message" : "分析並顯示當前頁面所使用的網站技術。"
+   },
+   "tabTechnology": {
+      "message" : "技術"
+   },
+   "tabDetail": {
+      "message" : "詳細信息"
+   },
+   "tabCategory": {
+      "message" : "類別"
+   },
+   "btnOptions": {
+      "message" : "選項"
+   },
+   "btnShowHeader": {
+      "message" : "原始HTTP頭"
+   },
+   "ip": {
+      "message" : "IP位址"
+   },
+   "webserver": {
+      "message" : "伺服器軟體"
+   },
+   "webTechnology": {
+      "message" : "網站技術"
+   },
+   "os": {
+      "message" : "作業系統"
+   },
+   "frontLibraries": {
+      "message" : "前端庫"
+   },
+   "webApps": {
+      "message" : "Web軟體"
+   }
+}

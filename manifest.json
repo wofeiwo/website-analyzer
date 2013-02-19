@@ -1,0 +1,31 @@
+{
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "icons": {
+    "128": "icon-128x128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/web_technologies.js", 
+      "js/web_servers.js", 
+      "js/oses.js", 
+      "js/web_front_libraries.js", 
+      "js/web_apps.js", 
+      "js/background.js"
+    ],
+    "persistent": true // must be true because page_action icon should always shown
+    },
+  "content_scripts": [ {
+    "js": ["js/website_analyzer.js"],
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_end" // use "document_end" so that DOM render over.
+  } ],
+  "options_page": "options.html",
+  "page_action": {
+    "default_popup": "popup.html"
+  }
+}
