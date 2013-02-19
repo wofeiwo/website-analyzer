@@ -17,12 +17,12 @@
       "js/web_apps.js", 
       "js/background.js"
     ],
-    "persistent": true // must be true because page_action icon should always shown
+    "persistent": true
     },
   "content_scripts": [ {
     "js": ["js/website_analyzer.js"],
     "matches": [ "http://*/*", "https://*/*" ],
-    "run_at": "document_end" // use "document_end" so that DOM render over.
+    "run_at": "document_end"
   } ],
   "options_page": "options.html",
   "page_action": {
