@@ -14,6 +14,48 @@ var oses = [
     "url"  : "http://www.debian.org/"
   },
   {
+    "icon": "debian.png",
+    "title": "Debian",
+    "match": "X-Powered-by",
+    "regex": "(Debian|dotdeb|(sarge|etch|lenny|queeze|wheezy|jessie))",
+    "url"  : "http://www.debian.org/"
+  },
+  {
+    "icon": "centos.jpg",
+    "title": "CentOS",
+    "match": "Server",
+    "regex": "CentOS",
+    "url"  : "http://www.centos.org/"
+  },
+  {
+    "icon": "centos.jpg",
+    "title": "CentOS",
+    "match": "X-Powered-by",
+    "regex": "CentOS",
+    "url"  : "http://www.centos.org/"
+  },
+  {
+    "icon": "gentoo.png",
+    "title": "Gentoo",
+    "match": "X-Powered-by",
+    "regex": "-?gentoo",
+    "url"  : "http://www.gentoo.org/"
+  },
+  {
+    "icon": "redhat.png",
+    "title": "Red Hat",
+    "match": "Server",
+    "regex": "(.*rhel(\\d+)|Red Hat)",
+    "url"  : "http://www.redhat.com/"
+  },
+  {
+    "icon": "redhat.png",
+    "title": "Red Hat",
+    "match": "X-Powered-by",
+    "regex": "Red Hat",
+    "url"  : "http://www.redhat.com/"
+  },
+  {
     "icon": "freebsd.png",
     "title": "FreeBSD",
     "match": "Server",

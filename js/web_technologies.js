@@ -21,6 +21,41 @@ var web_technologies = [
     "url": "http://djangoproject.com/"
   },
   {
+    "icon": "cakephp.ico",
+    "title": "Cakephp Framework",
+    "match": "Set-Cookie",
+    "regex": "cakephp=",
+    "url": "http://cakephp.org/"
+  },
+  {
+    "icon": "kohana.ico",
+    "title": "Kohana Framework",
+    "match": "Set-Cookie",
+    "regex": "kohanasession",
+    "url": "http://kohanaframework.org/"
+  },
+  {
+    "icon": "kohana.ico",
+    "title": "Kohana Framework",
+    "match": "X-Powered-By",
+    "regex": "Kohana Framework ([\\d.]+)",
+    "url": "http://kohanaframework.org/"
+  },
+  {
+    "icon": "codeigniter.ico",
+    "title": "CodeIgniter Framework",
+    "match": "Set-Cookie",
+    "regex": "(exp_last_activity|exp_tracker|ci_session)",
+    "url": "http://ellislab.com/codeigniter/"
+  },
+  {
+    "icon": "nodejs.ico",
+    "title": "Nodejs Connect",
+    "match": "X-Powered-By",
+    "regex": "^Connect$",
+    "url": "http://www.senchalabs.org/connect/"
+  },
+  {
     "icon": "dragonflycms.ico",
     "title": "CPG Dragonfly CMS",
     "match": "X-Powered-By",
@@ -64,9 +99,9 @@ var web_technologies = [
   },
   {
     "icon": "oracle.ico",
-    "title": "JavaServer Pages Technology",
+    "title": "Java Technology",
     "match": "X-Powered-By",
-    "regex": "^JSP.*",
+    "regex": "^(JSP|JSF|Servlet).*",
     "url": "http://java.sun.com/products/jsp/"
   },
   {
@@ -77,11 +112,25 @@ var web_technologies = [
     "url": "http://php.net/"
   },
   {
+    "icon": "oracle.ico",
+    "title": "Oracle Java Technology",
+    "match": "Set-Cookie",
+    "regex": "JSESSIONID",
+    "url": "http://java.com/"
+  },
+  {
     "icon": "php.ico",
     "title": "PHP",
     "match": "Server",
     "regex": "PHP.*",
     "url": "http://php.net/"
+  },
+  {
+    "icon": "ruby.ico",
+    "title": "Ruby",
+    "match": "Server",
+    "regex": "(Mongrel|WEBrick|Ruby)",
+    "url": "http://ruby.com/"
   },
   {
     "icon": "phusion_passenger.png",
@@ -131,5 +180,19 @@ var web_technologies = [
     "match": "X-Powered-By",
     "regex": "^ASP.NET.*",
     "url": "http://www.asp.net/"
+  },
+  {
+    "icon": "rubyonrails.ico",
+    "title": "Ruby on Rails",
+    "match": "Server",
+    "regex": "(mod_rails|mod_rack|Phusion(\\.|_)Passenger)",
+    "url": "http://rubyonrails.org/"
+  },
+  {
+    "icon": "rubyonrails.ico",
+    "title": "Ruby on Rails",
+    "match": "X-Powered-By",
+    "regex": "(mod_rails|mod_rack|Phusion(\\.|_)Passenger)",
+    "url": "http://rubyonrails.org/"
   }
 ];

@@ -17,6 +17,7 @@ function covertNodes(root){
                 "attributes": {
                     "src": node.src,
                     "href": node.href,
+                    "name": node.name,
                     "content": node.content
                 },
                 "nodeType": node.nodeType

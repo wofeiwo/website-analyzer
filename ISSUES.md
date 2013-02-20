@@ -5,6 +5,7 @@ Todo (任务)
 * <del>dom分析功能</del>
 * <del>IP地理信息功能</del>
 * 加入whatweb的特征库
+* 加入wappalyer特征库
 * 加入国内webapp的特征库
 * <del>弹出界面的美化修改</del>
 * <del>抽象判断识别代码，分离成函数</del>

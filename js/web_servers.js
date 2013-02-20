@@ -31,6 +31,13 @@ var web_servers = [
     "regex": "^Antiweb.*"
   },
   {
+    "icon": "apache.ico",
+    "title": "Apache Traffic Server",
+    "match": "Server",
+    "regex": "ATS/?([\\d.]+)?",
+    "url"  : "http://tomcat.apache.org"
+  },
+  {
     "icon": "tomcat.png",
     "title": "Tomcat",
     "match": "Server",
@@ -419,6 +426,12 @@ var web_servers = [
     "regex": "^(gws|GSE).*"
   },
   {
+    "icon": "google.ico",
+    "title": "Google App Engine",
+    "match": "Server",
+    "regex": "Google Frontend"
+  },
+  {
     "icon": "baidu.ico",
     "title": "Baidu Web Server",
     "match": "Server",
@@ -463,10 +476,23 @@ var web_servers = [
     "regex": "^X5.*"
   },
   {
+    "icon": "cloudflare.png",
+    "title": "CloudFlare",
+    "match": "Server",
+    "regex": "cloudflare"
+  },
+  {
     "icon": "zeus.ico",
     "title": "Zeus Web Server",
     "match": "Server",
     "url"  : "http://www.zeus.com",
     "regex": "^Zeus.*"
+  },
+  {
+    "icon": "couchdb.ico",
+    "title": "Apache CouchDB",
+    "match": "Server",
+    "url"  : "http://couchdb.apache.org",
+    "regex": "CouchDB/([\\d.]+)"
   }
 ];
