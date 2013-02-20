@@ -7,6 +7,13 @@ var oses = [
     "url"  : "http://www.ubuntu.org/"
   },
   {
+    "icon": "ubuntu.png",
+    "title": "Ubuntu",
+    "match": "Server",
+    "regex": "Ubuntu",
+    "url"  : "http://www.ubuntu.org/"
+  },
+  {
     "icon": "debian.png",
     "title": "Debian",
     "match": "Server",

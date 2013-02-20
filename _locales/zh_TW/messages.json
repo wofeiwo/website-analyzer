@@ -20,6 +20,12 @@
    "btnShowHeader": {
       "message" : "原始HTTP頭"
    },
+   "btnSource": {
+      "message" : "插件源码"
+   },
+   "btnIssue": {
+      "message" : "报告问题"
+   },
    "ip": {
       "message" : "IP位址"
    },

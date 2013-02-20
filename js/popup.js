@@ -151,7 +151,19 @@ function showHeader() {
         if (data['raw_header']) {
             document.getElementById('debug').innerText = data['raw_header'];
             document.getElementById('debug').style.display = "";
+            document.getElementById('show_header').innerHTML = "<i class=\"icon-eye-close\"></i>";
+            document.getElementById('show_header').removeEventListener('click', showHeader);
+            document.getElementById('show_header').addEventListener('click', hideHeader);
         }
+    });
+}
+
+function hideHeader() {
+    chrome.tabs.getSelected(null, function(tab) {
+        document.getElementById('debug').style.display = "none";
+        document.getElementById('show_header').innerHTML = "<i class=\"icon-eye-open\"></i>";
+        document.getElementById('show_header').removeEventListener('click', hideHeader);
+        document.getElementById('show_header').addEventListener('click', showHeader);
     });
 }
 
@@ -162,5 +174,7 @@ document.getElementById('show_header').addEventListener('click', showHeader);
 document.getElementById('tabCategory').innerText = chrome.i18n.getMessage("tabCategory");
 document.getElementById('tabTechnology').innerText = chrome.i18n.getMessage("tabTechnology");
 document.getElementById('tabDetail').innerText = chrome.i18n.getMessage("tabDetail");
-document.getElementById('btnOptions').innerText = chrome.i18n.getMessage("btnOptions");
-document.getElementById('show_header').innerText = chrome.i18n.getMessage("btnShowHeader");
+document.getElementById('btnOptions').setAttribute("title", chrome.i18n.getMessage("btnOptions"));
+document.getElementById('show_header').setAttribute("title", chrome.i18n.getMessage("btnShowHeader"));
+// document.getElementById('btnSource').innerText = chrome.i18n.getMessage("btnSource");
+document.getElementById('btnIssue').setAttribute("title", chrome.i18n.getMessage("btnIssue"));

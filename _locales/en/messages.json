@@ -20,6 +20,12 @@
    "btnShowHeader": {
       "message" : "Raw HTTP Headers"
    },
+   "btnSource": {
+      "message" : "Get Source"
+   },
+   "btnIssue": {
+      "message" : "Feedback"
+   },
    "ip": {
       "message" : "IP Address"
    },
