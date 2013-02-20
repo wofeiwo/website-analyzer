@@ -11,6 +11,13 @@ function covertNodes(root){
 
     while(node){
         if(node.nodeType == 1 || node.nodeType == 3 || node.nodeType == 8){ // element
+            // fix chrome bug
+            // chrome blows up here if value is an input that doesn't support 
+            //one of these three properties ['selectionStart', 'selectionEnd', 'selectionDirection'] (e.g. <input type="file"/>)
+            if (node.nodeName == 'INPUT' || node.nodeName == 'TEXTAREA' || node.nodeName == 'FORM') {
+                node = iterator.nextNode();
+                continue;
+            }
             nodes.push({
                 "nodeName" : node.nodeName,
                 "nodeValue": node.nodeValue,
