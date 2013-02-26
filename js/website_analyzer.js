@@ -36,7 +36,12 @@ function covertNodes(root){
 }
 
 client.onreadystatechange = function() {
-    if (document.location.hostname == 'localhost' || document.location.hostname == '127.0.0.1') {
+    if (document.location.hostname == 'localhost'
+     || document.location.hostname.indexOf('127.0.0.') != -1
+     || document.location.hostname.indexOf('192.168.') != -1
+     || document.location.hostname.indexOf('10.') != -1
+     || document.location.hostname.match('172\\.(1[6-9]|2\\d|3(0|1))\\.') != null
+     ) {
         var hostname = null;
     }else{
         var hostname = document.location.hostname;
