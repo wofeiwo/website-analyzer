@@ -83,16 +83,19 @@ function sendToCloud(techData){
       {
         'category' : 'webserver',
         'title'    : webserver.title,
+        'detail'   : webserver.result?webserver.result[0]:'',
         'url'      : webserver.url
       },
       {
         'category' : 'os',
         'title'    : os.title,
+        'detail'   : os.result?os.result[0]:'',
         'url'      : os.url
       },
       {
         'category' : 'technology',
         'title'    : technology.title,
+        'detail'   : technology.result?technology.result[0]:'',
         'url'      : technology.url
       }
     ]
@@ -118,7 +121,9 @@ function sendToCloud(techData){
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       var resp = JSON.parse(xhr.responseText);
-      // console.log(resp);
+      if (resp.status != 'ok') {
+        console.log(resp);
+      }
     }
   }
   xhr.send(JSON.stringify(data));
