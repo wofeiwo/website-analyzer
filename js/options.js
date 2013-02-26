@@ -21,7 +21,7 @@ function restore_options() {
     for (var i = 0; i < select.children.length; i++) {
       var child = select.children[i];
       if (child.value == icon) {
-        child.setAttribute("selected", "true");
+        child.selected = true;
         break;
       }
     }
@@ -29,7 +29,9 @@ function restore_options() {
 
   var checkbox = document.getElementById("upload_server");
   var checked = localStorage["upload_server"];
-  if (checked){
+  if (checked == "false") {
+    checkbox.removeAttribute("checked");
+  }else{
     checkbox.setAttribute("checked", "true");
   }
 }
@@ -40,6 +42,6 @@ function close_options(){
   });
 }
 
-document.addEventListener('DOMContentReady', restore_options);
+window.addEventListener('load', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('close').addEventListener('click', close_options);

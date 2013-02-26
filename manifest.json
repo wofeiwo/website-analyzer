@@ -1,8 +1,8 @@
 {
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
-  "version": "1.0.2",
+  "permissions": [ "http://*/*", "https://*/*", "tabs", "storage", "history" ],
+  "version": "1.0.3",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
@@ -15,6 +15,7 @@
       "js/oses.js", 
       "js/web_front_libraries.js", 
       "js/web_apps.js", 
+      "js/purl.js", 
       "js/background.js"
     ],
     "persistent": true

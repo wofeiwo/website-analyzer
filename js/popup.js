@@ -30,9 +30,9 @@ function main() {
         var td2 = document.createElement('td');
         if (data['technology'].url) {
             // td2.innerHTML = "<a href=\"" + data['technology_url'] + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['technology_icon'] + "\" />&nbsp;&nbsp;" + data['technology'] + "</a>";
-            td2.innerHTML = "<a href=\"" + data['technology'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['technology'].icon + "\"></a>";
+            td2.innerHTML = "<a href=\"" + data['technology'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['technology'].icon + "\" title=\"" + data['technology'].title + "\"></a>";
         }else{
-            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['technology'].icon + "\">";
+            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['technology'].icon + "\" title=\"" + data['technology'].title + "\">";
         }
         var td3 = document.createElement('td');
         if (data['technology'].result) {
@@ -56,9 +56,9 @@ function main() {
         var td2 = document.createElement('td');
         if (data['webserver'].url) {
             // td2.innerHTML = "<a href=\"" + data['webserver_url'] + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['webserver_icon'] + "\" />&nbsp;&nbsp;" + data['webserver'] + "</a>";
-            td2.innerHTML = "<a href=\"" + data['webserver'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['webserver'].icon + "\"></a>";
+            td2.innerHTML = "<a href=\"" + data['webserver'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['webserver'].icon + "\" title=\"" + data['webserver'].title + "\"></a>";
         }else{
-            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['webserver'].icon + "\">";
+            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['webserver'].icon + "\" title=\"" + data['webserver'].title + "\">";
         }
         var td3 = document.createElement('td');
         if (data['webserver'].result) {
@@ -82,9 +82,9 @@ function main() {
         var td2 = document.createElement('td');
         if (data['os'].url) {
             // td2.innerHTML = "<a href=\"" + data['os_url'] + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os_icon'] + "\" />&nbsp;&nbsp;" + data['os'] + "</a>";
-            td2.innerHTML = "<a href=\"" + data['os'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\"></a>";
+            td2.innerHTML = "<a href=\"" + data['os'].url + "\" target=\"_blank\"><img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\" title=\"" + data['os'].title + "\"></a>";
         }else{
-            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\">";
+            td2.innerHTML = "<img class=\"img\" width=\"19px\" hight=\"19px\" src=\"icons/" + data['os'].icon + "\" title=\"" + data['os'].title + "\">";
         }
         var td3 = document.createElement('td');
         if (data['os'].result) {

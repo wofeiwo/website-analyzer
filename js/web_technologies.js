@@ -38,7 +38,7 @@ var web_technologies = [
     "icon": "kohana.ico",
     "title": "Kohana Framework",
     "match": "X-Powered-By",
-    "regex": "Kohana Framework ([\\d.]+)",
+    "regex": "Kohana Framework ([\\d.]+)?",
     "url": "http://kohanaframework.org/"
   },
   {
@@ -108,7 +108,7 @@ var web_technologies = [
     "icon": "php.ico",
     "title": "PHP",
     "match": "X-Powered-By",
-    "regex": "^PHP.*",
+    "regex": "PHP/?([\\d.]+)?",
     "url": "http://php.net/"
   },
   {
@@ -122,7 +122,7 @@ var web_technologies = [
     "icon": "php.ico",
     "title": "PHP",
     "match": "Server",
-    "regex": "PHP.*",
+    "regex": "PHP/?([\\d.]+)?",
     "url": "http://php.net/"
   },
   {

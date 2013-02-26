@@ -1,5 +1,5 @@
 var client = new XMLHttpRequest();
-client.open("GET", document.location.pathname, true);
+client.open("HEAD", document.location.pathname, true);
 client.send();
 
 // contentScript send nodes information to extension.

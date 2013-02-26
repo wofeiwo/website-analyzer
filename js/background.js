@@ -59,12 +59,92 @@ function findNode(root, type, text, name, attr){
   return false;
 }
 
+function sendToCloud(techData){
+  var xhr         = new XMLHttpRequest();
+  var hostname    = techData.hostname;
+  var port        = techData.port;
+  var title       = techData.title;
+  var ipaddress   = techData.ip_info.Ip;
+  var geo         = techData.ip_info.City + ", " + techData.ip_info.RegionName + ", " + techData.ip_info.CountryName;
+  var webserver   = techData.webserver;
+  var os          = techData.os;
+  var technology  = techData.technology;
+  var libraries   = techData.front_libraries;
+  var webapps     = techData.web_apps;
+  // var request_url = "http://localhost:5000/website/upload" // for development
+  var request_url = "http://www.websth.com/website/upload"
+  var data = {
+    'hostname'     : hostname,
+    'port'         : port,
+    'title'        : title,
+    'ipaddress'    : ipaddress,
+    'geo'          : geo,
+    'technologies' : [
+      {
+        'category' : 'webserver',
+        'title'    : webserver.title,
+        'url'      : webserver.url
+      },
+      {
+        'category' : 'os',
+        'title'    : os.title,
+        'url'      : os.url
+      },
+      {
+        'category' : 'technology',
+        'title'    : technology.title,
+        'url'      : technology.url
+      }
+    ]
+  };
+
+  for (var i in libraries) {
+    data.technologies.push({
+      'category' : 'front_libraries',
+      'title'    : libraries[i].title,
+      'url'      : libraries[i].url
+    });
+  }
+
+  for (var i in webapps) {
+    data.technologies.push({
+      'category' : 'web_apps',
+      'title'    : webapps[i].title,
+      'url'      : webapps[i].url
+    });
+  }
+
+  xhr.open("POST", request_url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      var resp = JSON.parse(xhr.responseText);
+      // console.log(resp);
+    }
+  }
+  xhr.send(JSON.stringify(data));
+}
+
+function storeSite(host, port) {
+  var storage = chrome.storage.local;
+  var now     = new Date();
+  var key     = host + ':' + port;
+  var struct  = {};
+  struct[key] = {
+    'last' : now.getTime()
+  };
+
+  storage.set(struct);
+}
+
 chrome.extension.onMessage.addListener(function(data, sender) {
   technologyData[sender.tab.id] = parseHeader(data.header);
   technologyData[sender.tab.id]['raw_header'] = data.header;
   technologyData[sender.tab.id]['hostname'] = data.hostname;
+  technologyData[sender.tab.id]['port'] = data.port || 80;
+  technologyData[sender.tab.id]['title'] = sender.tab.title;
   var root = data.dom;
 
+  // handle ip
   if(data.hostname != null){
     // get server ip informations.
     var xhr = new XMLHttpRequest();
@@ -73,8 +153,13 @@ chrome.extension.onMessage.addListener(function(data, sender) {
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
         var resp = JSON.parse(xhr.responseText);
-        console.log(resp);
+        // console.log(resp);
         technologyData[sender.tab.id]['ip_info'] = resp;
+
+        // upload server info to cloud? must be here
+        if (technologyData[sender.tab.id]['is_upload']) {
+          sendToCloud(technologyData[sender.tab.id]);
+        }
       }
     }
     xhr.send();
@@ -83,6 +168,34 @@ chrome.extension.onMessage.addListener(function(data, sender) {
   var alt = "Unknown technology";
   var ico = "unrecognized_technology.png";
   var show_icon = localStorage["icon"];
+
+  // handle localstorage
+  var key = technologyData[sender.tab.id]['hostname'] + ':' + technologyData[sender.tab.id]['port'];
+  var storage = chrome.storage.local;
+  var now = new Date();
+  storage.get(key, function(struct) {
+    if (struct[key]) {
+      var last = new Date(struct[key]['last']);
+      var diff = now - last;
+      if (diff >= (24*60*60*1000)) { // over one day.
+        technologyData[sender.tab.id]['is_upload'] = true;
+      }else if((now - new Date(now.getFullYear(), now.getMonth(), now.getDate())) < diff) { // if history before current day 00:00.
+        technologyData[sender.tab.id]['is_upload'] = true;
+      }else if(diff < 1000){ // never visited.
+        technologyData[sender.tab.id]['is_upload'] = true;
+      }else{
+        technologyData[sender.tab.id]['is_upload'] = false;
+      }
+    }else{ // never recorded. means never visited.
+      technologyData[sender.tab.id]['is_upload'] = true;
+    }
+
+    if (localStorage["upload_server"] == false) {
+      technologyData[sender.tab.id]['is_upload'] = false;
+    }
+  });
+
+  storeSite(technologyData[sender.tab.id]['hostname'], technologyData[sender.tab.id]['port']);
 
   // match web technologies
   var technology = matchRule(technologyData[sender.tab.id], web_technologies);
@@ -146,6 +259,7 @@ chrome.extension.onMessage.addListener(function(data, sender) {
         break;
   }
 
+  // set up page action
   chrome.pageAction.setIcon({
     tabId: sender.tab.id, 
     path: "icons/" + ico

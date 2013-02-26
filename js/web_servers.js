@@ -12,6 +12,13 @@ var web_servers = [
     "regex": "^AOLserver.*"
   },
   {
+    "icon" : "apusic.ico",
+    "title": "Apusic Application Server",
+    "match": "Server",
+    "regex": "Apusic Application Server/?([\\d.]+)?",
+    "url"  : "http://www.apusic.com/products/server.faces"
+  },
+  {
     "icon": "abyss.gif",
     "title": "Abyss",
     "match": "Server",
@@ -48,7 +55,7 @@ var web_servers = [
     "icon": "nginx.gif",
     "title": "Tengine Webserver, Taobao version nginx",
     "match": "Server",
-    "regex": "^Tengine.*",
+    "regex": "Tengine/?([\\d.]+)?",
     "url": "http://tengine.taobao.org/"
   },
   {
@@ -391,14 +398,14 @@ var web_servers = [
     "icon": "lighttpd.ico",
     "title": "Lighttpd",
     "match": "Server",
-    "regex": "^lighttpd.*",
+    "regex": "lighttpd/?([\\d.]+)?",
     "url"  : "http://www.lighttpd.net"
   },
   {
     "icon": "nginx.gif",
     "title": "Nginx",
     "match": "Server",
-    "regex": "^nginx.*",
+    "regex": "nginx/?([\\d.]+)?",
     "url"  : "http://nginx.org"
   },
   {
@@ -493,6 +500,13 @@ var web_servers = [
     "title": "Apache CouchDB",
     "match": "Server",
     "url"  : "http://couchdb.apache.org",
-    "regex": "CouchDB/([\\d.]+)"
+    "regex": "CouchDB/([\\d.]+)?"
+  },
+  {
+    "icon": "python.ico",
+    "title": "Python Werkzeug",
+    "match": "Server",
+    "url"  : "http://werkzeug.pocoo.org",
+    "regex": "Werkzeug/([\\d.]+)?"
   }
 ];

@@ -38,5 +38,6 @@ Plan to add (计划添加)
 * <del>Raw header show</del>
 * CDN identification
 * Statistics script of the website
+* User submit website information to cloud
 
 Copyright (c) 2013-2013 wofeiwo, released under the MIT license

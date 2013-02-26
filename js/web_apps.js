@@ -398,5 +398,24 @@ var web_apps = [
                 "match": "vBulletin"
             }
         ]
+    },
+    {
+        "icon": "nexusphp.png",
+        "title": "NexusPHP",
+        "url" : "http://www.vbulletin.com",
+        "rules": [
+            {
+                "type": 1,
+                "name": "META",
+                "attributes": "content",
+                "match": "NexusPHP"
+            },
+            {
+                "type": 1,
+                "name": "A",
+                "attributes": "href",
+                "match": "aboutnexus.php"
+            }
+        ]
     }
 ]
