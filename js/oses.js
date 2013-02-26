@@ -123,5 +123,11 @@ var oses = [
     "title": "Unix",
     "match": "Server",
     "regex": "Unix"
+  },
+  {
+    "icon": "unix.png",
+    "title": "Unix",
+    "match": "Server",
+    "regex": "Posix"
   }
 ]

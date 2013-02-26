@@ -17,6 +17,12 @@ var web_apps = [
                 "match": "Discuz\\!"
             },
             {
+                "type": 3,
+                "name": "TITLE",
+                "attributes": "",
+                "match": "Powered by Discuz\\!"
+            },
+            {
                 "type": 1,
                 "name": "A",
                 "attributes": "href",

@@ -77,6 +77,13 @@ var web_technologies = [
     "url": "http://www.dklab.ru/chicken/nablas/4.html"
   },
   {
+    "icon": "pike.ico",
+    "title": "Pike language",
+    "match": "Server",
+    "regex": "^Pike.*",
+    "url": "http://pike.lysator.liu.se/"
+  },
+  {
     "icon": "biferno.ico",
     "title": "Biferno",
     "match": "X-Powered-By",

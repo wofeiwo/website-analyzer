@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "permissions": [ "http://*/*", "https://*/*", "tabs", "storage", "history" ],
+  "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
   "version": "1.0.3",
   "manifest_version": 2,
   "default_locale": "en",

@@ -1,15 +1,16 @@
 var web_servers = [
   {
-    "icon": "4d_webstar_s.gif",
+    "icon" : "4d_webstar_s.gif",
     "title": "4D WebSTAR",
     "match": "Server",
     "regex": "^4D_WebSTAR_S.*"
   },
   {
-    "icon": "aolserver.gif",
+    "icon" : "aolserver.gif",
     "title": "AOLserver",
     "match": "Server",
-    "regex": "^AOLserver.*"
+    "regex": "^AOLserver.*",
+    "url"  : "http://www.aolserver.com"
   },
   {
     "icon" : "apusic.ico",
@@ -19,23 +20,25 @@ var web_servers = [
     "url"  : "http://www.apusic.com/products/server.faces"
   },
   {
-    "icon": "abyss.gif",
+    "icon" : "abyss.gif",
     "title": "Abyss",
     "match": "Server",
-    "regex": "^Abyss.*"
+    "regex": "^Abyss.*",
+    "url"  : "http://www.aprelium.com/abyssws/"
   },
   {
-    "icon": "gunicorn.png",
+    "icon" : "gunicorn.png",
     "title": "Gunicorn",
     "match": "Server",
     "regex": "^gunicorn.*",
     "url"  : "http://gunicorn.org"
   },
   {
-    "icon": "antiweb.gif",
+    "icon" : "antiweb.gif",
     "title": "Anti-Web HTTPD",
     "match": "Server",
-    "regex": "^Antiweb.*"
+    "regex": "^Antiweb.*",
+    "url"  : "http://www.hcsw.org/awhttpd/"
   },
   {
     "icon": "apache.ico",
@@ -56,7 +59,7 @@ var web_servers = [
     "title": "Tengine Webserver, Taobao version nginx",
     "match": "Server",
     "regex": "Tengine/?([\\d.]+)?",
-    "url": "http://tengine.taobao.org/"
+    "url"  : "http://tengine.taobao.org/"
   },
   {
     "icon": "apache.ico",
@@ -69,73 +72,85 @@ var web_servers = [
     "icon": "badblue.gif",
     "title": "BadBlue",
     "match": "Server",
-    "regex": "^BadBlue.*"
+    "regex": "^BadBlue.*",
+    "url"  : "http://www.badblue.com/prod.htm"
   },
   {
     "icon": "barracudadrive.gif",
     "title": "BarracudaDrive",
     "match": "Server",
-    "regex": "^BarracudaServer.*"
+    "regex": "^BarracudaServer.*",
+    "url"  : "http://barracudadrive.com/"
   },
   {
     "icon": "boa.gif",
     "title": "Boa",
     "match": "Server",
-    "regex": "^Boa.*"
+    "regex": "^Boa.*",
+    "url"  : "http://www.boa.org/"
   },
   {
     "icon": "caudium.gif",
     "title": "Caudium",
     "match": "Server",
-    "regex": "^Caudium.*"
+    "regex": "^Caudium.*",
+    "url"  : "http://caudium.net/space/start"
   },
   {
     "icon": "cherokee.gif",
     "title": "Cherokee",
     "match": "Server",
-    "regex": "^Cherokee.*"
+    "regex": "Cherokee/?([\\d.]+)?",
+    "url"  : "http://www.cherokee-project.com/"
   },
   {
     "icon": "cisco.gif",
     "title": "Cisco",
     "match": "Server",
-    "regex": "^Virata.*"
+    "regex": "^Virata.*",
+    "url"  : "http://www.cisco.com"
   },
   {
     "icon": "flexwatch.gif",
     "title": "FlexWATCH",
     "match": "Server",
-    "regex": "^GoAhead.*"
+    "regex": "^GoAhead.*",
+    "url"  : "http://www.flexwatch.com/"
   },
   {
     "icon": "gatling.gif",
     "title": "Gatling",
     "match": "Server",
-    "regex": "^Gatling.*"
+    "regex": "Gatling/?([\\d.]+)?",
+    "url"  : "http://www.fefe.de/gatling/"
   },
   {
     "icon": "hiawatha.gif",
     "title": "Hiawatha",
     "match": "Server",
-    "regex": "^Hiawatha.*"
+    "regex": "^Hiawatha.*",
+    "url"  : "http://www.hiawatha-webserver.org/"
   },
   {
     "icon": "ibm.ico",
     "title": "IBM HTTP Server",
     "match": "Server",
-    "regex": "^IBM.*"
+    "regex": "^IBM.*",
+    "url"  : "http://www.ibm.com/software/webservers/httpservers/"
   },
   {
     "icon": "icewarp.gif",
     "title": "IceWarp",
     "match": "Server",
-    "regex": "^IceWarp.*"
+    "regex": "IceWarp/?([\\d.]+)?",
+    "url"  : "http://www.icewarp.com/"
   },
   {
     "icon": "jana.gif",
     "title": "Jana-Server",
     "match": "Server",
-    "regex": "^Jana-Server.*"
+    "regex": "^Jana-Server.*",
+    "url"  : "http://www.janaserver.de/"
   },
   {
     "icon": "jetty.gif",
@@ -154,7 +169,8 @@ var web_servers = [
     "icon": "linksys.gif",
     "title": "Linksys",
     "match": "Server",
-    "regex": "^Boa.*"
+    "regex": "Linksys",
+    "url"  : "http://www.linksys.com"
   },
   {
     "icon": "litespeed.gif",
@@ -167,7 +183,8 @@ var web_servers = [
     "icon": "lotus_domino_go_webserver.gif",
     "title": "Lotus Domino Go Webserver",
     "match": "Server",
-    "regex": "^Domino-Go-Webserver.*"
+    "regex": "^Domino-Go-Webserver.*",
+    "url": "http://www.ibm.com/software/lotus/products/domino/"
   },
   {
     "icon": "ibm.ico",
@@ -187,7 +204,8 @@ var web_servers = [
     "icon": "mongrel.gif",
     "title": "Mongrel",
     "match": "Server",
-    "regex": "^Mongrel.*"
+    "regex": "^Mongrel.*",
+    "url"  : "http://mongrel2.org/"
   },
   {
     "icon": "net2phone.gif",
@@ -265,7 +283,8 @@ var web_servers = [
     "icon": "resin.gif",
     "title": "Resin",
     "match": "Server",
-    "regex": "^Resin.*"
+    "regex": "Resin/?([\\d.]+)?",
+    "url"  : "http://www.caucho.com/resin-application-server/"
   },
   {
     "icon": "ricoh_aficio.gif",
@@ -277,7 +296,8 @@ var web_servers = [
     "icon": "roxen.gif",
     "title": "Roxen",
     "match": "Server",
-    "regex": "^Roxen.*"
+    "regex": "^Roxen.*",
+    "url"  : "http://www.roxen.com/products/cms/webserver/"
   },
   {
     "icon": "snap.gif",
@@ -295,13 +315,15 @@ var web_servers = [
     "icon": "squid.gif",
     "title": "Squid",
     "match": "Server",
-    "regex": "^squid.*"
+    "regex": "^squid.*",
+    "url"  : "http://www.squid-cache.org/"
   },
   {
     "icon": "sun_java_system.gif",
     "title": "Sun",
     "match": "Server",
-    "regex": "^Sun-.*"
+    "regex": "^Sun-.*",
+    "url"  : "http://www.sun.com"
   },
   {
     "icon": "tclhttpd.gif",
@@ -352,10 +374,25 @@ var web_servers = [
     "regex": "^Yaws.*"
   },
   {
-    "icon": "zeus.gif",
-    "title": "Zeus",
+    "icon": "jiasule.gif",
+    "title": "加速乐 WAF",
     "match": "Server",
-    "regex": "^Zeus.*"
+    "regex": "jiasule-WAF.*",
+    "url"  : "http://www.jiasule.com"
+  },
+  {
+    "icon": "anquanbao.ico",
+    "title": "安全宝 WAF",
+    "match": "Server",
+    "regex": "ASERVER/?([\\d.]+)?",
+    "url"  : "http://anquanbao.com"
+  },
+  {
+    "icon": "anquanbao.ico",
+    "title": "安全宝 WAF",
+    "match": "X-Powered-By-Anquanbao",
+    "regex": "HIT",
+    "url"  : "http://anquanbao.com"
   },
   {
     "icon": "zope.gif",
@@ -386,7 +423,8 @@ var web_servers = [
     "icon": "emule.gif",
     "title": "eMule",
     "match": "Server",
-    "regex": "^eMule.*"
+    "regex": "^eMule.*",
+    "url"  : "http://www.emule-project.net/"
   },
   {
     "icon": "router.jpg",
@@ -430,25 +468,29 @@ var web_servers = [
     "icon": "google.ico",
     "title": "Google Web Server",
     "match": "Server",
-    "regex": "^(gws|GSE).*"
+    "regex": "^(gws|GSE).*",
+    "url"  : "http://www.google.com"
   },
   {
     "icon": "google.ico",
     "title": "Google App Engine",
     "match": "Server",
-    "regex": "Google Frontend"
+    "regex": "Google Frontend",
+    "url"  : "http://www.google.com"
   },
   {
     "icon": "baidu.ico",
     "title": "Baidu Web Server",
     "match": "Server",
-    "regex": "^BWS.*"
+    "regex": "^BWS.*",
+    "url"  : "http://www.baidu.com"
   },
   {
     "icon": "tencent.ico",
     "title": "Tencent Web Server",
     "match": "Server",
-    "regex": "^TWS.*"
+    "regex": "^TWS.*",
+    "url"  : "http://www.tencent.com"
   },
   {
     "icon": "jigsaw.ico",
