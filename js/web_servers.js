@@ -65,7 +65,7 @@ var web_servers = [
     "icon": "apache.ico",
     "title": "Apache",
     "match": "Server",
-    "regex": "^Apache.*",
+    "regex": "Apache/?([\\d.]+)?",
     "url"  : "http://httpd.apache.org"
   },
   {
