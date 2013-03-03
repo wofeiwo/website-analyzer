@@ -17,7 +17,7 @@ var oses = [
     "icon": "debian.png",
     "title": "Debian",
     "match": "Server",
-    "regex": "Debian.*",
+    "regex": "Debian",
     "url"  : "http://www.debian.org/"
   },
   {
