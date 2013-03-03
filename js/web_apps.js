@@ -423,5 +423,24 @@ var web_apps = [
                 "match": "aboutnexus.php"
             }
         ]
+    },
+    {
+        "icon": "empirecms.ico",
+        "title": "EmpireCMS",
+        "url" : "http://www.phome.net/",
+        "rules": [
+            {
+                "type": 1,
+                "name": "META",
+                "attributes": "content",
+                "match": "EmpireCMS"
+            },
+            {
+                "type": 3,
+                "name": "TITLE",
+                "attributes": "",
+                "match": "Powered by EmpireCMS"
+            }
+        ]
     }
 ]
