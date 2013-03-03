@@ -48,6 +48,13 @@ var web_servers = [
     "url"  : "http://tomcat.apache.org"
   },
   {
+    "icon": "jboss.jpg",
+    "title": "JBoss",
+    "match": "X-Powered-By",
+    "regex": "JBoss.*",
+    "url"  : "http://www.redhat.com/products/jbossenterprisemiddleware/web-server/"
+  },
+  {
     "icon": "tomcat.png",
     "title": "Tomcat",
     "match": "Server",

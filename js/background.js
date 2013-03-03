@@ -1,6 +1,14 @@
+/////////////////////////////////////////////////////////////////////////////////
+//constants
+/////////////////////////////////////////////////////////////////////////////////
 const trimer = new RegExp('(^[\\s\\t\\xa0\\u3000]+)|([\\u3000\\xa0\\s\\t]+\x24)', 'g');
 var technologyData = {};
+// const request_url = "http://localhost:5000/website/upload" // for development
+const request_url = "http://www.websth.com/website/upload"
 
+/////////////////////////////////////////////////////////////////////////////////
+//functions
+/////////////////////////////////////////////////////////////////////////////////
 function parseHeader(raw) {
   var headers = new Array();
   var lines = raw.split("\r\n");
@@ -71,8 +79,6 @@ function sendToCloud(techData){
   var technology  = techData.technology;
   var libraries   = techData.front_libraries;
   var webapps     = techData.web_apps;
-  // var request_url = "http://localhost:5000/website/upload" // for development
-  var request_url = "http://www.websth.com/website/upload"
   var data = {
     'hostname'     : hostname,
     'port'         : port,
@@ -141,6 +147,9 @@ function storeSite(host, port) {
   storage.set(struct);
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+//events
+/////////////////////////////////////////////////////////////////////////////////
 chrome.extension.onMessage.addListener(function(data, sender) {
   technologyData[sender.tab.id] = parseHeader(data.header);
   technologyData[sender.tab.id]['raw_header'] = data.header;
@@ -278,4 +287,12 @@ chrome.extension.onMessage.addListener(function(data, sender) {
 
 chrome.tabs.onRemoved.addListener(function(tabId) {
   delete technologyData[tabId];
+});
+
+chrome.runtime.onInstalled.addListener(function(detail) {
+  if (detail.reason == 'install') {
+    chrome.tabs.create({
+      'url' : 'options.html'
+    });
+  }
 });
