@@ -14,8 +14,7 @@
       "js/web_servers.js", 
       "js/oses.js", 
       "js/web_front_libraries.js", 
-      "js/web_apps.js", 
-      "js/purl.js", 
+      "js/web_apps.js",
       "js/background.js"
     ],
     "persistent": true
