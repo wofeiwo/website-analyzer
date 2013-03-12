@@ -5,6 +5,11 @@ const trimer = new RegExp('(^[\\s\\t\\xa0\\u3000]+)|([\\u3000\\xa0\\s\\t]+\x24)'
 var technologyData = {};
 // const request_url = "http://localhost:5000/website/upload" // for development
 const request_url = "http://www.websth.com/website/upload"
+const oses_url = "http://www.websth.com/static/app/oses.json"
+const web_apps_url = "http://www.websth.com/static/app/web_apps.json"
+const web_front_libraries_url = "http://www.websth.com/static/app/web_front_libraries.json"
+const web_servers_url = "http://www.websth.com/static/app/web_servers.json"
+const web_technologies_url = "http://www.websth.com/static/app/web_technologies.json"
 
 /////////////////////////////////////////////////////////////////////////////////
 //functions
@@ -65,6 +70,18 @@ function findNode(root, type, text, name, attr){
     }
   }
   return false;
+}
+
+function getCloudJson(varname, url){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var resp = JSON.parse(xhr.responseText);
+      eval(varname + ' = resp;');
+    }
+  }
+  xhr.send();
 }
 
 function sendToCloud(techData){
@@ -296,3 +313,13 @@ chrome.runtime.onInstalled.addListener(function(detail) {
     });
   }
 });
+
+/////////////////////////////////////////////////////////////////////////////////
+//Run
+/////////////////////////////////////////////////////////////////////////////////
+// load all cloud data to replace local rules.
+getCloudJson('oses', oses_url);
+getCloudJson('web_apps', web_apps_url);
+getCloudJson('web_front_libraries', web_front_libraries_url);
+getCloudJson('web_servers', web_servers_url);
+getCloudJson('web_technologies', web_technologies_url);
