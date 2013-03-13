@@ -37,7 +37,7 @@ var web_front_libraries = [
                 "match": "backbone.*\\.js"
             }
         ]
-    },,
+    },
     {
         "icon": "swfupload.gif",
         "title": "swfupload",
@@ -181,4 +181,4 @@ var web_front_libraries = [
             }
         ]
     }
-]
+];

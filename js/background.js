@@ -78,7 +78,7 @@ function getCloudJson(varname, url){
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var resp = JSON.parse(xhr.responseText);
-      eval(varname + ' = resp;');
+      window[varname] = resp;
     }
   }
   xhr.send();
