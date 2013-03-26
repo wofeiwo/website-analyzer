@@ -176,5 +176,6 @@ document.getElementById('tabTechnology').innerText = chrome.i18n.getMessage("tab
 document.getElementById('tabDetail').innerText = chrome.i18n.getMessage("tabDetail");
 document.getElementById('btnOptions').setAttribute("title", chrome.i18n.getMessage("btnOptions"));
 document.getElementById('show_header').setAttribute("title", chrome.i18n.getMessage("btnShowHeader"));
+document.getElementById('cloud_search').setAttribute("title", chrome.i18n.getMessage("btnCloudSearch"));
 // document.getElementById('btnSource').innerText = chrome.i18n.getMessage("btnSource");
 document.getElementById('btnIssue').setAttribute("title", chrome.i18n.getMessage("btnIssue"));

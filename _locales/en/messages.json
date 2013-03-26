@@ -20,6 +20,9 @@
    "btnShowHeader": {
       "message" : "Raw HTTP Headers"
    },
+   "btnCloudSearch": {
+      "message" : "Search in Cloud"
+   },
    "btnSource": {
       "message" : "Get Source"
    },

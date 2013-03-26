@@ -20,6 +20,9 @@
    "btnShowHeader": {
       "message" : "原始HTTP頭"
    },
+   "btnCloudSearch": {
+      "message" : "雲端檢索"
+   },
    "btnSource": {
       "message" : "插件源码"
    },

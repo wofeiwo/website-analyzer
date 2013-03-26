@@ -2,7 +2,7 @@
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
   "permissions": [ "http://*/*", "https://*/*", "tabs", "storage" ],
-  "version": "1.0.3",
+  "version": "1.1.0",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
