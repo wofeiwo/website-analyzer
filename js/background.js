@@ -174,28 +174,6 @@ chrome.extension.onMessage.addListener(function(data, sender) {
   technologyData[sender.tab.id]['port'] = data.port || 80;
   technologyData[sender.tab.id]['title'] = sender.tab.title;
   var root = data.dom;
-
-  // handle ip
-  if(data.hostname != null){
-    // get server ip informations.
-    var xhr = new XMLHttpRequest();
-    var request_url = "http://api.ipinfodb.com/v2/ip_query.php?key=5eb5b4de91741e2e4b98748989dc84f3236b55f6dd38aa689921884867536f36&ip=" + data.hostname + "&output=json&timezone=false"
-    xhr.open("GET", request_url, true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4) {
-        var resp = JSON.parse(xhr.responseText);
-        // console.log(resp);
-        technologyData[sender.tab.id]['ip_info'] = resp;
-
-        // upload server info to cloud? must be here
-        if (technologyData[sender.tab.id]['is_upload']) {
-          sendToCloud(technologyData[sender.tab.id]);
-        }
-      }
-    }
-    xhr.send();
-  }
-
   var alt = "Unknown technology";
   var ico = "unrecognized_technology.png";
   var show_icon = localStorage["icon"];
@@ -227,6 +205,27 @@ chrome.extension.onMessage.addListener(function(data, sender) {
   });
 
   storeSite(technologyData[sender.tab.id]['hostname'], technologyData[sender.tab.id]['port']);
+
+  // handle ip
+  if(data.hostname != null){
+    // get server ip informations.
+    var xhr = new XMLHttpRequest();
+    var request_url = "http://api.ipinfodb.com/v2/ip_query.php?key=5eb5b4de91741e2e4b98748989dc84f3236b55f6dd38aa689921884867536f36&ip=" + data.hostname + "&output=json&timezone=false"
+    xhr.open("GET", request_url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        var resp = JSON.parse(xhr.responseText);
+        // console.log(resp);
+        technologyData[sender.tab.id]['ip_info'] = resp;
+
+        // upload server info to cloud? must be here
+        if (technologyData[sender.tab.id]['is_upload']) {
+          sendToCloud(technologyData[sender.tab.id]);
+        }
+      }
+    }
+    xhr.send();
+  }
 
   // match web technologies
   var technology = matchRule(technologyData[sender.tab.id], web_technologies);
