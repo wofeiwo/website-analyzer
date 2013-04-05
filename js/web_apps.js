@@ -75,6 +75,19 @@ var web_apps = [
             }
         ]
     },
+	{
+        "icon": "zblog.png",
+        "title": "Z-Blog",
+        "url" : "http://www.rainbowsoft.org",
+        "rules": [
+            {
+                "type": 1,
+                "name": "LINK",
+                "attributes": "href",
+                "match": "zb_users.*"
+            }
+        ]
+    },
     {
         "icon": "joomla.ico",
         "title": "Joomla!",
