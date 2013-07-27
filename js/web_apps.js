@@ -147,6 +147,32 @@ var web_apps = [
         ]
     },
     {
+        "icon": "struts.jpg",
+        "title": "Struts1",
+        "url" : "http://struts.apache.org",
+        "rules": [
+            {
+                "type": 1,
+                "name": "A",
+                "attributes": "href",
+                "match": "\\.do\\??"
+            }
+        ]
+    },
+    {
+        "icon": "struts.jpg",
+        "title": "Struts2",
+        "url" : "http://struts.apache.org",
+        "rules": [
+            {
+                "type": 1,
+                "name": "A",
+                "attributes": "href",
+                "match": "\\.action\\??"
+            }
+        ]
+    },
+    {
         "icon": "awstats.jpg",
         "title": "AWStats",
         "url" : "http://awstats.sourceforge.net",
