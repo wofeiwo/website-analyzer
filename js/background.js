@@ -210,7 +210,8 @@ chrome.extension.onMessage.addListener(function(data, sender) {
   if(data.hostname != null){
     // get server ip informations.
     var xhr = new XMLHttpRequest();
-    var request_url = "http://api.ipinfodb.com/v2/ip_query.php?key=5eb5b4de91741e2e4b98748989dc84f3236b55f6dd38aa689921884867536f36&ip=" + data.hostname + "&output=json&timezone=false"
+    // var request_url = "http://api.ipinfodb.com/v2/ip_query.php?key=5eb5b4de91741e2e4b98748989dc84f3236b55f6dd38aa689921884867536f36&ip=" + data.hostname + "&output=json&timezone=false"
+    var request_url = "http://api.ipinfodb.com/v3/ip-city/?key=5eb5b4de91741e2e4b98748989dc84f3236b55f6dd38aa689921884867536f36&ip=" + data.hostname + "&format=json&timezone=false"
     xhr.open("GET", request_url, true);
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
