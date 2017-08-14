@@ -41,4 +41,4 @@ Plan to add (计划添加)
 * User submit website information to cloud
 * User submit technology figerprint to cloud
 
-Copyright (c) 2013-2013 wofeiwo, released under the MIT license
+Copyright (c) 2013-2017 wofeiwo, released under the Apache license
