@@ -1,6 +1,8 @@
 Website Analyzer
 =======================
 
+[![License](https://img.shields.io/github/license/wofeiwo/Website-Analyzer.svg)](https://github.com/wofeiwo/Website-Analyzer/LICENSE)
+
 Summary (主要描述)
 ----------
 
